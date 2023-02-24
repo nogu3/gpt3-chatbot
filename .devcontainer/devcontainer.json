@@ -1,0 +1,16 @@
+{
+    "name": "Gpt3 Chatbot",
+    "dockerComposeFile": "../docker-compose.yml",
+    "workspaceFolder": "/home",
+	"service": "server",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rebornix.Ruby",
+				"kaiwood.endwise",
+				"castwide.solargraph",
+				"ionutvmi.path-autocomplete"
+			]
+		}
+	},
+}
