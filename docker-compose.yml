@@ -6,10 +6,11 @@ services:
     tty: true
     volumes:
       - ./src:/home/src
+      - ./logs:/home/logs
       - bundle_folder:/usr/local/bundle
     environment:
       - API_KEY=<your-api-key>
-      - LOG_PATH=/home/tmp/logs/server.log
+      - LOG_PATH=/home/logs/server.log
 
 volumes:
   bundle_folder:
