@@ -1,7 +1,7 @@
 {
-    "name": "Gpt3 Chatbot",
-    "dockerComposeFile": "../docker-compose.yml",
-    "workspaceFolder": "/home",
+	"name": "Gpt3 Chatbot",
+	"dockerComposeFile": "../docker-compose.yml",
+	"workspaceFolder": "/home",
 	"service": "server",
 	"customizations": {
 		"vscode": {
@@ -10,7 +10,21 @@
 				"kaiwood.endwise",
 				"castwide.solargraph",
 				"ionutvmi.path-autocomplete"
-			]
+			],
+			"settings": {
+				// 基本的な言語機能のサポート
+				"ruby.useLanguageServer": true,
+				// Formatで使用するツールを`bundle exec`で実行するかどうか
+				"ruby.useBundler": true,
+				// `Format Document`で使用するフォーマッターにrubocopを指定
+				"ruby.format": "rubocop",
+				// Linterにrubocopを指定
+				"ruby.lint": {
+					"rubocop": {
+						"useBundler": true
+					}
+				},
+			}
 		}
 	},
 }
