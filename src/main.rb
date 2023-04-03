@@ -1,13 +1,11 @@
-require "openai"
-require_relative "./utils/openai_client"
+require 'openai'
+require_relative './utils/openai_client'
 
-user_question = <<'EOS'
-あなたはAppleの創業者であるスティーブ・ジョブズです。なぜアップルは、まだARグラスを発売していないのか、説明してください。
-EOS
+user_question = File.read('./test/question.txt')
 
-puts "少々お待ちを。"
+puts '少々お待ちを。'
 
 client = OpenAIClient.new
-answer = client.completions(user_question) 
+answer = client.completions(user_question)
 
 puts answer
