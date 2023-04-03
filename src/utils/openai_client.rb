@@ -10,14 +10,7 @@ class OpenAIClient
   end
 
   def completions(question)
-    response = @client.completions(
-      parameters: {
-        model: 'text-davinci-003',
-        prompt: question,
-        max_tokens: 2028,
-        temperature: 0.5
-      }
-    )
+    response = request(question)
 
     logger.debug(response.body)
 
@@ -29,6 +22,17 @@ class OpenAIClient
     end
 
     get_answer(response)
+  end
+
+  def request(question)
+    @client.completions(
+      parameters: {
+        model: 'text-davinci-003',
+        prompt: question,
+        max_tokens: 2028,
+        temperature: 0.5
+      }
+    )
   end
 
   def get_answer(response)
