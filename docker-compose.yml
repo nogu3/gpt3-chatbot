@@ -5,11 +5,11 @@ services:
     build: .
     tty: true
     volumes:
-      - .:/home
+      - .:/home/gpt-chatbot
       - bundle_folder:/usr/local/bundle
     environment:
       - API_KEY=<your-api-key>
-      - LOG_PATH=/home/logs/server.log
+      - LOG_PATH=/home/gpt-chatbot/logs/server.log
 
 volumes:
   bundle_folder:

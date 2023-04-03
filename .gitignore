@@ -58,3 +58,7 @@ build-iPhoneSimulator/
 # question.txt use local test. other file is dust.
 test/*
 !question.txt
+
+# ignore history_file
+.bash_history
+.irb_history
