@@ -5,8 +5,7 @@ services:
     build: .
     tty: true
     volumes:
-      - ./src:/home/src
-      - ./logs:/home/logs
+      - .:/home
       - bundle_folder:/usr/local/bundle
     environment:
       - API_KEY=<your-api-key>
