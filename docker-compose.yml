@@ -3,13 +3,13 @@ version: "3.9"
 services:
   server:
     build: .
-    tty: true
     volumes:
-      - .:/home/gpt-chatbot
+      - .:/home/gpt-chatbot/workspace
       - bundle_folder:/usr/local/bundle
     environment:
       - API_KEY=<your-api-key>
       - LOG_PATH=/home/gpt-chatbot/logs/server.log
+    tty: true
 
 volumes:
   bundle_folder:

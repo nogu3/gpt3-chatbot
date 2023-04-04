@@ -12,7 +12,7 @@ RUN useradd -U -u $UID -m gpt-chatbot -s /bin/bash
 
 USER gpt-chatbot
 
-WORKDIR /home/gpt-chatbot
+WORKDIR /home/gpt-chatbot/workspace
 
 # install bundler
 RUN gem install bundler

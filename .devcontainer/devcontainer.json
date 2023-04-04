@@ -1,7 +1,8 @@
 {
 	"name": "Gpt3 Chatbot",
 	"dockerComposeFile": "../docker-compose.yml",
-	"workspaceFolder": "/home",
+	"workspaceFolder": "/home/gpt-chatbot/workspace",
+	"remoteUser": "gpt-chatbot",
 	"service": "server",
 	"customizations": {
 		"vscode": {
